@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { testCall } from '../actions/testAction';
 import { getTimeSeriesData } from '../actions/timeseries/timeSeriesAction';
 import { fetchSuggestions, clearSuggestions, downloadStocks } from '../actions/timeseries/stockSuggestionsActions';
@@ -8,9 +8,9 @@ import AutoCompleteInput from '../components/inputs/AutoCompleteInput';
 import classNames from 'classnames/bind';
 import style from 'css/components/autosuggest';
 import _ from 'lodash';
-import LineChart from '../components/graphs/LineChart';
-import OHLC from '../components/graphs/OHLC';
+import OHLC from '../components/canvas/OHLC';
 import ajax from '../../utils/ajax';
+import PathFinder, { Button } from 'react-pathfinder';
 
 const cx = classNames.bind(style);
 class Main extends Component {
@@ -72,10 +72,10 @@ class Main extends Component {
           {this.state.invalid &&
             <span>Invalid Stock</span>
           }
-            {/* <LineChart height={400} width={400}/> */}
-            <div>
+            <PathFinder height={500} width={500}/>
+            {/* <div>
               <OHLC height={400} width={400}/>
-            </div>
+            </div> */}
      
           <span>test</span>
           </div>
