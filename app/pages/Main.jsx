@@ -58,7 +58,13 @@ class Main extends Component {
         
         <Col xs={3} style={styles.column}>
           <div>
-          <Button disabled={this.state.invalid} bsStyle="primary" onClick={() => this.handleClick()} bsSize="xs" >
+          <Button 
+            disabled={this.state.invalid} 
+            bsStyle="primary" 
+            onClick={() => this.handleClick()} 
+            bgColor="orange"
+            hoverColor="darkOrange"
+          >
             Click Here
           </Button>
           <AutoCompleteInput 
